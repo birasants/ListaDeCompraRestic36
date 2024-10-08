@@ -1,0 +1,148 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.header{
+  width: 100%;
+  height: 33px;
+  rotate: 180deg;
+  background-image: url('../../assets/triangleYellow.svg');
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+footer{
+  width: 100%;
+  height: 33px;
+  background-image: url('../../assets/triangleYellow.svg');
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+.formContainer{
+  display: flex;
+  justify-content: space-around;
+}
+
+.bgList {
+  background-color: #FED38F;
+  h1 {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+  h2{
+    margin: 0;
+    padding: 1rem;
+    font-weight: 400;
+  }
+}
+
+.inputText{
+  border-radius: 1rem;
+  border: none;
+  width: 75%;
+  background-color: #CA943E;
+  color: white;
+  font-size: 1rem;
+}
+
+.inputText:focus {
+  box-shadow: 0 0 5px 2px rgba(255, 215, 0, 0.5);
+  outline: none;
+}
+.inputText::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.listStyle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.butAdd{
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.8rem ;
+  border: none;
+  color: white;
+  background-color: #CA943E;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.bought {
+  padding: 1rem;
+  span{
+    text-decoration: line-through;
+  }
+  color: gray;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .formContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .inputText {
+    width: 60%;
+    font-size: 0.9rem; 
+    margin-bottom: 10px; 
+  }
+
+  .butAdd {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+  }
+}
+

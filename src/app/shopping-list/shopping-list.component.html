@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="header">
+  </div>
+  <div class="bgList">
+    <h1>Lista de Compras</h1>
+    <form class="formContainer" (submit)="addItem()">
+      <input class="inputText"
+        type="text"
+        [(ngModel)]="newItem"
+        placeholder="Adicione um item"
+        required
+        name="item"
+      />
+      <button class="butAdd" type="submit">Adicionar</button>
+    </form>
+
+    <div class="list-group">
+      <h2>Não Comprados</h2>
+      <ul>
+        <ng-container *ngFor="let item of items">
+          <li *ngIf="!item.bought" [ngClass]="{'bought': item.bought}" class="listStyle">
+            <span>{{ item.name }}</span>
+            <button class="butAdd" (click)="toggleBought(item)">Marcar como Comprado</button>
+            <button class="butAdd" (click)="editItem(item)">Editar</button>
+            <button class="butAdd" (click)="deleteItem(item)">Excluir</button>
+          </li>
+        </ng-container>
+      </ul>
+      <div class="dots"></div>
+    </div>
+
+    <div class="list-group">
+      <h2>Comprados</h2>
+      <ul>
+        <ng-container *ngFor="let item of items">
+          <li *ngIf="item.bought" [ngClass]="{'bought': item.bought}" class="listStyle">
+            <span>{{ item.name }}</span>
+            <button (click)="toggleBought(item)" class="butAdd">Desmarcar</button>
+            <button (click)="deleteItem(item)" class="butAdd">Excluir</button>
+          </li>
+        </ng-container>
+      </ul>
+      <div class="dots"></div>
+    </div>
+  </div>
+  <footer></footer>
+</div>
